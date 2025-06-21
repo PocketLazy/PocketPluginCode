@@ -1,0 +1,25 @@
+name: PocketPlugin
+main: com.pocketlazy.pocketplugin.PocketPlugin
+version: 1.0.0
+api-version: "1.21"
+load: POSTWORLD
+authors:
+  - PocketLazy
+description: "A plugin adding custom gamerules and PvP enhancements."
+website: "https://github.com/PocketLazy/PocketPlugin"
+
+commands:
+  pocket:
+    description: "Main command for PocketPlugin: manage gamerules and features"
+    usage: "/pocket [cartProt|crystals|combatProt|timer|elytraCombat|commands|recipes]"
+    aliases: [pp, pocket]
+    permission: pocket.admin
+    permission-message: "You do not have permission to use this command."
+  Crafts:
+    description: "Opens the custom recipes GUI"
+    usage: "/crafts"
+
+permissions:
+  pocket.admin:
+    description: "Allows changing all PocketPlugin gamerules"
+    default: op

@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.pocketlazy'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://repo.spongepowered.org/maven/' }
+}
+
+dependencies {
+   compileOnly 'io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT'
+}
+
+jar {
+    archiveBaseName.set('PocketPlugin')
+    archiveVersion.set(version)
+}
