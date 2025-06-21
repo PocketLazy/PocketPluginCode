@@ -35,11 +35,11 @@ public class RecipesListener implements Listener {
             if (clicked == null) return;
             if (clicked.isSimilar(StoragePouchListener.createPouch())) {
                 RecipeDetailsGUI.openPouchRecipe(player);
-            } else if (clicked.isSimilar(TreecapitatorAxesListener.createTreecapitator())) {
+            } else if (clicked.isSimilar(TreecapitatorAxesListener.createTreecapitator(0))) {
                 RecipeDetailsGUI.openTreecapRecipe(player);
-            } else if (clicked.isSimilar(CustomItems.getLumberAxe(0))) {
+            } else if (clicked.isSimilar(TreecapitatorAxesListener.getLumberAxe(0))) {
                 RecipeDetailsGUI.openLumberAxeRecipe(player);
-            } else if (clicked.isSimilar(CustomItems.getWoodenChopper())) {
+            } else if (clicked.isSimilar(TreecapitatorAxesListener.getWoodenChopper(0))) {
                 RecipeDetailsGUI.openWoodenChopperRecipe(player);
             }
             return;
