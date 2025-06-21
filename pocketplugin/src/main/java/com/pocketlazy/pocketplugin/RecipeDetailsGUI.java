@@ -46,7 +46,7 @@ public class RecipeDetailsGUI implements Listener {
         Inventory gui = Bukkit.createInventory(null, 27, ChatColor.YELLOW + "Wooden Chopper Recipe");
         ItemStack oakLog = new ItemStack(Material.OAK_LOG);
         ItemStack woodenAxe = new ItemStack(Material.WOODEN_AXE);
-        ItemStack woodenChopper = CustomItems.getWoodenChopper();
+        ItemStack woodenChopper = TreecapitatorAxesListener.getWoodenChopper(0);
         gui.setItem(10, oakLog);
         gui.setItem(11, oakLog);
         gui.setItem(12, oakLog);
@@ -62,8 +62,8 @@ public class RecipeDetailsGUI implements Listener {
     public static void openLumberAxeRecipe(Player player) {
         Inventory gui = Bukkit.createInventory(null, 27, ChatColor.GREEN + "Lumber Axe Recipe");
         ItemStack compact = CompactOakListener.createCompactOak();
-        ItemStack woodenChopper = CustomItems.getWoodenChopper();
-        ItemStack lumberAxe = CustomItems.getLumberAxe(0);
+        ItemStack woodenChopper = TreecapitatorAxesListener.getWoodenChopper(0);
+        ItemStack lumberAxe = TreecapitatorAxesListener.getLumberAxe(0);
         gui.setItem(10, compact);
         gui.setItem(11, compact);
         gui.setItem(12, compact);
@@ -80,8 +80,8 @@ public class RecipeDetailsGUI implements Listener {
         Inventory gui = Bukkit.createInventory(null, 27, ChatColor.GREEN + "Treecapitator Recipe");
         ItemStack gold = new ItemStack(Material.GOLD_BLOCK);
         ItemStack apple = new ItemStack(Material.GOLDEN_APPLE);
-        ItemStack lumberAxe = CustomItems.getLumberAxe(0);
-        ItemStack treecap = TreecapitatorAxesListener.createTreecapitator();
+        ItemStack lumberAxe = TreecapitatorAxesListener.getLumberAxe(0);
+        ItemStack treecap = TreecapitatorAxesListener.createTreecapitator(0);
         gui.setItem(10, gold);
         gui.setItem(11, apple);
         gui.setItem(12, gold);
