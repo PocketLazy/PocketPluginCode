@@ -25,11 +25,11 @@ import java.util.*;
 
 public class StoragePouchListener implements Listener {
     public static final int BUNDLE_SIZE = 9;
-    // CHANGED: Displayed GUI title is now "Storage Pouch"
+
     private static final String BUNDLE_TITLE = ChatColor.GOLD + "Storage Pouch";
     private static final NamespacedKey POUCH_UUID_KEY = new NamespacedKey("pocketplugin", "pouch_uuid");
 
-    // For best compatibility, use the Mojang "MHF_Chest" player for chest texture
+
     public static final String CHEST_OWNER = "MHF_Chest";
 
     public static boolean isPouch(ItemStack stack) {
@@ -192,7 +192,7 @@ public class StoragePouchListener implements Listener {
         StoragePouchSession.deletePouch(pouchId);
     }
 
-    // --- Pouch Recipe Registration (bundle + chest -> pouch head) ---
+//recipe
 
     public static void registerCustomRecipes(Plugin plugin, boolean enable) {
         // Remove all vanilla bundle recipes (optional)
@@ -208,14 +208,14 @@ public class StoragePouchListener implements Listener {
 
         if (!enable) return;
 
-        // Add our pouch recipe: shapeless (bundle + chest -> pouch head)
+        // Add our pouch recipe
         ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "storage_pouch"), createPouch());
         recipe.addIngredient(Material.BUNDLE);
         recipe.addIngredient(Material.CHEST);
         Bukkit.addRecipe(recipe);
     }
 
-    // --- Ensure every crafted pouch has a unique UUID ---
+    //  Ensure every crafted pouch has a unique UUID ---
     @EventHandler
     public void onPouchCraft(PrepareItemCraftEvent event) {
         ItemStack result = event.getInventory().getResult();
