@@ -24,7 +24,7 @@ public class CompactOakSession {
             this.offhand = offhand;
         }
 
-        // Find actual ItemStack in inventory (so updates are saved!)
+        // Find actual ItemStack in inventory
         public ItemStack getOak(Player player) {
             if (offhand) {
                 ItemStack off = player.getInventory().getItemInOffHand();
