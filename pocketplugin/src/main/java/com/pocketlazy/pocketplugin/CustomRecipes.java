@@ -10,7 +10,7 @@ import org.bukkit.plugin.Plugin;
 import com.pocketlazy.pocketplugin.forestitems.CompactOakListener;
 
 public class CustomRecipes {
-    // Register custom Compact Oak recipe via crafting event
+
     public static void registerCompactOakListener(Plugin plugin) {
         Bukkit.getPluginManager().registerEvents(new Listener() {
             @EventHandler
@@ -31,7 +31,7 @@ public class CustomRecipes {
                     event.getInventory().setResult(CompactOakListener.createCompactOak());
                 } else if (event.getInventory().getResult() != null &&
                         event.getInventory().getResult().isSimilar(CompactOakListener.createCompactOak())) {
-                    // Only clear the result if it would have been the Compact Oak
+                
                     event.getInventory().setResult(null);
                 }
             }
