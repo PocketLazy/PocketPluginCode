@@ -38,9 +38,9 @@ public class RecipesOverviewGUI implements Listener {
 
         if (type == Type.UTILITY) {
             gui.setItem(10, StoragePouchListener.createPouch());
-            gui.setItem(12, TreecapitatorAxesListener.createTreecapitator());
-            gui.setItem(14, CustomItems.getLumberAxe(0));
-            gui.setItem(16, CustomItems.getWoodenChopper());
+            gui.setItem(12, TreecapitatorAxesListener.createTreecapitator(0));
+            gui.setItem(14, TreecapitatorAxesListener.getLumberAxe(0));
+            gui.setItem(16, TreecapitatorAxesListener.getWoodenChopper(0));
         } else {
             gui.setItem(11, CompactOakListener.createCompactOak());
         }
@@ -66,11 +66,11 @@ public class RecipesOverviewGUI implements Listener {
         if (title.equals(ChatColor.GOLD + "Utility Recipes")) {
             if (clicked.isSimilar(StoragePouchListener.createPouch())) {
                 RecipeDetailsGUI.openPouchRecipe(player);
-            } else if (clicked.isSimilar(TreecapitatorAxesListener.createTreecapitator())) {
+            } else if (clicked.isSimilar(TreecapitatorAxesListener.createTreecapitator(0))) {
                 RecipeDetailsGUI.openTreecapRecipe(player);
-            } else if (clicked.isSimilar(CustomItems.getLumberAxe(0))) {
+            } else if (clicked.isSimilar(TreecapitatorAxesListener.getLumberAxe(0))) {
                 RecipeDetailsGUI.openLumberAxeRecipe(player);
-            } else if (clicked.isSimilar(CustomItems.getWoodenChopper())) {
+            } else if (clicked.isSimilar(TreecapitatorAxesListener.getWoodenChopper(0))) {
                 RecipeDetailsGUI.openWoodenChopperRecipe(player);
             }
         } else if (title.equals(ChatColor.GREEN + "Material Recipes")) {
